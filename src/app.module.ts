@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { PuppeteerModule } from './puppeteer/puppeteer.module';
 import { AvitoModule } from './avito/avito.module';
 import { ConfigModule } from '@nestjs/config';
+import { MessagesModule } from './messages/messages.module';
 
 @Module({
   imports: [
@@ -12,7 +13,8 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: ".env"
-    })
+    }),
+    MessagesModule
   ],
   controllers: [AppController],
   providers: [AppService],
