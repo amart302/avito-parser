@@ -59,7 +59,7 @@ export class AvitoService implements OnModuleInit {
 
     private async openDialog(): Promise<void> {
         const page = this.puppeteerService.getPage();
-        const targetUsername = process.env.AVITO_TARGET_USER || '';
+        const targetUsername = process.env.AVITO_TARGET_USER || 'Рушан Натфуллин';
 
         this.logger.log('Opening Avito messenger and searching for dialog');
 
